@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 schema/
 .env
+
+#for now
+build.sh
+Dockerfile

@@ -6,11 +6,11 @@ load_dotenv()
 
 REPO_URL = os.getenv('REPO_URL')
 IS_AIRFLOW = os.getenv('AIRFLOW_HOME') is not None
-AIRFLOW_HOME = os.getenv('AIRFLOW_HOME', '..')  # Go up one level
+AIRFLOW_HOME = os.getenv('AIRFLOW_HOME', '..')
 
 def sync_repo():
     try:
-        repo = git.Repo('..')  # Go up one level since we're in dags/
+        repo = git.Repo('..')
         print(f"Pulling latest changes from {repo.remotes.origin.url}")
         repo.remotes.origin.pull()
     except git.exc.InvalidGitRepositoryError as e:

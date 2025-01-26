@@ -2,3 +2,8 @@ apache-airflow
 apache-airflow-providers-postgres
 gitpython
 python-dotenv
+sqlalchemy
+pgvector
+asyncpg
+greenlet
+psycopg2-binary

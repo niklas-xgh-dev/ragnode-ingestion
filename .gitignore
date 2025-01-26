@@ -3,3 +3,14 @@ __pycache__/
 *.pyc
 schema/
 .env
+
+# Airflow specific files
+*.err
+*.log
+*.pid
+*.out
+logs/
+airflow.db
+airflow.cfg
+webserver_config.py
+sync_requirements.sh

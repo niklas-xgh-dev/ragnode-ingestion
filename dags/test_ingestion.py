@@ -14,6 +14,7 @@ def test_ingestion():
         session.commit()
 
 if IS_AIRFLOW:
+    import datetime
     from airflow import DAG
     from airflow.operators.python import PythonOperator
     with DAG('test_ingestion', 

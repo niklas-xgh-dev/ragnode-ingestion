@@ -5,6 +5,7 @@ import os
 load_dotenv()
 
 REPO_URL = os.getenv('REPO_URL')
+# to differentiate between local testing and prod deployment
 IS_AIRFLOW = os.getenv('AIRFLOW_HOME') is not None
 
 def sync_repo():

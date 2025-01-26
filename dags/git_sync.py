@@ -24,7 +24,7 @@ if IS_AIRFLOW:
             'owner': 'airflow',
             'start_date': datetime(2025, 1, 1)
         },
-        schedule_interval='*/5 * * * *',
+        schedule_interval='0 0 * * *',
         catchup=False
     )
 

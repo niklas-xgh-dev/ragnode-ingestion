@@ -56,7 +56,7 @@ if IS_AIRFLOW:
         'mock_ingestion',
         default_args=default_args,
         description='Mock data ingestion pipeline',
-        schedule_interval='*/5 * * * *',
+        schedule_interval='*/30 * * * *',
         catchup=False
     ) as dag:
 

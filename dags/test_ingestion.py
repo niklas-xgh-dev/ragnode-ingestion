@@ -19,7 +19,7 @@ if IS_AIRFLOW:
     from airflow.operators.python import PythonOperator
     with DAG('test_ingestion', 
             start_date=datetime(2025, 1, 1),
-            schedule_interval='*/5 * * * *',
+            schedule_interval='0 */4 * * *',
             catchup=False) as dag:
         
         PythonOperator(task_id='sync_dags', python_callable=test_ingestion)

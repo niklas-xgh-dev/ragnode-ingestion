@@ -17,6 +17,7 @@ if IS_AIRFLOW:
     from airflow import DAG
     from airflow.operators.python import PythonOperator
     with DAG('test_ingestion', 
+            start_date=datetime(2025, 1, 1),
             schedule_interval='*/5 * * * *',
             catchup=False) as dag:
         

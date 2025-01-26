@@ -22,7 +22,7 @@ if IS_AIRFLOW:
         'github_sync',
         default_args={
             'owner': 'airflow',
-            'start_date': datetime(2024, 1, 1)
+            'start_date': datetime(2025, 1, 1)
         },
         schedule_interval='*/5 * * * *',
         catchup=False

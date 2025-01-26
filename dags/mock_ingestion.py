@@ -14,7 +14,7 @@ default_args = {
     'owner': 'ragnode',
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'start_date': datetime(2024, 1, 1),
+    'start_date': datetime(2025, 1, 1),
     'max_active_runs': 1
 }
 
@@ -56,7 +56,7 @@ if IS_AIRFLOW:
         'mock_ingestion',
         default_args=default_args,
         description='Mock data ingestion pipeline',
-        schedule_interval=timedelta(minutes=5),
+        schedule_interval='*/5 * * * *'
         catchup=False
     ) as dag:
 

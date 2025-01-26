@@ -6,16 +6,11 @@ load_dotenv()
 
 REPO_URL = os.getenv('REPO_URL')
 IS_AIRFLOW = os.getenv('AIRFLOW_HOME') is not None
-AIRFLOW_HOME = os.getenv('AIRFLOW_HOME', '..')
 
 def sync_repo():
-    try:
-        repo = git.Repo('..')
-        print(f"Pulling latest changes from {repo.remotes.origin.url}")
-        repo.remotes.origin.pull()
-    except git.exc.InvalidGitRepositoryError as e:
-        print(f"Error: Not a git repository - {e}")
-        raise
+    repo = git.Repo()
+    print(f"Pulling latest changes from {repo.remotes.origin.url}")
+    repo.remotes.origin.pull()
 
 if IS_AIRFLOW:
     from airflow import DAG

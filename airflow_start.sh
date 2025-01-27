@@ -1,0 +1,2 @@
+airflow webserver --daemon --stdout /home/ansible/airflow/airflow-webserver.out --stderr /home/ansible/airflow/airflow-webserver.err
+airflow scheduler --daemon --stdout /home/ansible/airflow/airflow-scheduler.out --stderr /home/ansible/airflow/airflow-scheduler.err

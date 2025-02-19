@@ -9,6 +9,7 @@ REPO_URL = os.getenv('REPO_URL')
 IS_AIRFLOW = os.getenv('AIRFLOW_HOME') is not None
 
 def sync_repo():
+    os.chdir(os.getenv('AIRFLOW_HOME', os.getcwd()))
     repo = git.Repo()
     print(f"Pulling latest changes from {repo.remotes.origin.url}")
     repo.remotes.origin.pull()
